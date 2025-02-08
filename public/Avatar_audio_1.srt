@@ -1,0 +1,60 @@
+1
+00:00:00,000 --> 00:00:00,579
+Hi there!
+
+2
+00:00:01,460 --> 00:00:03,429
+Ever wish your slides
+could explain themselves
+
+3
+00:00:03,440 --> 00:00:04,659
+exactly how you would?
+
+4
+00:00:05,420 --> 00:00:06,859
+With Ancrypt, they can.
+
+5
+00:00:08,080 --> 00:00:10,949
+Just upload your deck,
+casually record your thoughts,
+
+6
+00:00:10,959 --> 00:00:14,489
+and let our AI transform
+them into polished scripts,
+
+7
+00:00:14,500 --> 00:00:16,679
+narrated by expressive
+avatars like me.
+
+8
+00:00:16,680 --> 00:00:19,728
+Place me anywhere in your
+slides to guide your audience,
+
+9
+00:00:19,740 --> 00:00:22,719
+simplify complex ideas, and
+save hours of repetition.
+
+10
+00:00:23,740 --> 00:00:24,239
+Best part?
+
+11
+00:00:24,840 --> 00:00:26,759
+Share your presentation
+with one link.
+
+12
+00:00:26,760 --> 00:00:29,719
+Ready to turn static
+slides into conversations?
+
+13
+00:00:30,500 --> 00:00:31,499
+Let's get started.
+
