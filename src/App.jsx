@@ -4,7 +4,7 @@ import Hero from "./sections/Hero";
 import AvatarPreview from "./components/avatarPreview";
 import Why from "./sections/why";
 import How from "./sections/How";
-import What from "./sections/What";
+import What from "./sections/what";
 
 const App = () => {
     return (
