@@ -1,6 +1,7 @@
 import DoneIcon from '@mui/icons-material/Done';
 import { useState } from 'react';
 import AvatarPreview from '../components/avatarPreview';
+import WaitlistPopup from './waitlist';
 
 const Points = ({heading, text}) => {
     return(
@@ -18,10 +19,10 @@ const Points = ({heading, text}) => {
 
 const What = () => {
 
-    
+    const [showPopup, setShowPopup] = useState(false);
 
     return(
-        <section className="pt-10 mt-[75px] w-fit mx-auto px-4 md:px-12 lg:px-0 mb-[75px]">
+        <section className="pt-10 mt-[55px] md:mt-[75px] w-fit mx-auto px-4 md:px-12 lg:px-0 mb-[55px] md:mb-[75px]">
             {/* Sub heading */}
             <div className='w-fit px-2 py-1 bg-[#998DF4]/15 rounded-xl my-[20px] md:my-[30px]'> 
                 <p className='text-[#5445C5] font-sans font-medium text-sm sm:text-md md:text-lg lg:text-xl'> What Makes This Powerful? </p>
@@ -44,16 +45,17 @@ const What = () => {
                     <Points heading='LMS & Platform Ready' text=' – Export as video, embed code, or integrate with Teachable/Thinkific in one click.'/>
                     {/* CTA */}
                     <div className='flex mt-[30px] md:mt-[60px] space-x-15'>
-                        <div className='w-fit px-8 py-2 border-1 border-gray-600 shadow-sm shadow-gray-200 rounded-xl cursor-pointer'>
-                        <p className='text-gray-900 font-sans font-medium lg:text-lg'> Get Started </p>
+                        <div onClick={() => setShowPopup(true)} className='w-fit px-8 py-2 border-1 border-gray-600 shadow-sm shadow-gray-200 rounded-xl cursor-pointer'>
+                        <p className='text-gray-900 font-sans font-medium lg:text-lg'> Try It Yourself </p>
                         </div>
                     </div>
                 </div>
                 {/* Image */}
                 <div className=" flex-grow hidden md:flex items-center justify-center mx-8">
-                    <img src="what.jpg" alt="Why Us" className="w-[clamp(30rem,36vw,27rem)] h-auto rounded-xl"/>
+                    <img src="what.jpg" alt="Why Us" className="w-[clamp(20rem,35vw,24rem)] h-auto rounded-xl"/>
                 </div>
             </div>
+            {showPopup && <WaitlistPopup onClose={() => setShowPopup(false)} />}
         </section>
     )
 }

@@ -5,18 +5,19 @@ import AvatarPreview from "./components/avatarPreview";
 import Why from "./sections/why";
 import How from "./sections/How";
 import What from "./sections/what";
+import Footer from "./sections/Footer";
 
 const App = () => {
     return (
       <>
-      <div className="bg-white mb-[300px]">
+      <div className="bg-white">
         <Header/>
         <Hero/>
         <Why/>
         <How/>
         <What/>
+        <Footer/>
       </div>
-      <p>j</p>
       </>
     )
 }

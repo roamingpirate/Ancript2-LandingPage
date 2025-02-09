@@ -25,7 +25,7 @@ const Hero = () => {
                     <div className="absolute left-[-15px] top-1/2 -translate-y-1/2 border-8 border-transparent border-r-gray-700"></div>
                 </div>
             </div>
-            {isVisible && <AvatarPreview avatarNumber={1} isMale={false}/>}
+            {isVisible && <AvatarPreview avatarNumber={1} isMale={false} isVisible={isVisible} setIsVisible={setIsVisible}/>}
             <div className="w-[80%] flex justify-center items-center mx-auto mt-8 shadow-md md:shadow-md cursor-pointer shadow-purple-400 rounded-lg">
                 <HeroSectionVideo/>
             </div>

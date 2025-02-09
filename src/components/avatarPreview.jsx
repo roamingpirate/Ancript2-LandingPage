@@ -4,10 +4,11 @@ import SubtitlesSyncText from "../subComponents/subtitles";
 import AvatarCanvas from "../subComponents/canvas";
 
 
-const AvatarPreview = ({avatarNumber,isMale}) => {
+const AvatarPreview = ({avatarNumber,isMale,isVisible,setIsVisible}) => {
 
     const [isPlaying, setIsPlaying] = useState(false);
-    const [isClosed, setIsClosed] = useState(false);
+    const [isLoading,setIsLoading] = useState(true);
+    //const [isClosed, setIsClosed] = useState(false);
     const avatarAudioRef = useRef(null);
 
     useEffect(() => {
@@ -21,6 +22,10 @@ const AvatarPreview = ({avatarNumber,isMale}) => {
     }, []);
 
     const handleAudioControl = () => {
+        if(isLoading)
+        {
+            return;
+        }
         if (isPlaying) {
             avatarAudioRef.current.pause();
         } else {
@@ -30,11 +35,11 @@ const AvatarPreview = ({avatarNumber,isMale}) => {
     } 
 
     return (
-        <div className={`fixed inset-0 flex flex-col justify-center items-center ${isClosed? 'hidden':'visible'} bg-black/80 backdrop-blur-sm z-50 w-screen `}>
+        <div className={`fixed inset-0 flex flex-col justify-center items-center ${!isVisible? 'hidden':'visible'} bg-black/80 backdrop-blur-sm z-50 w-screen `}>
             {/* Avatar Playback */}
             <div className="w-[300px] h-[300px] rounded-full flex justify-center bg-gray-500 border-2 border-gray-800 overflow-clip">
                     {/* <img src="avatar.png" className="rounded-full  h-[300px] w-[300px] p-1.5"/> */}
-                    <AvatarCanvas isPlaying={isPlaying} audio={avatarAudioRef} isMale={isMale} avatarNumber={avatarNumber}/>
+                    <AvatarCanvas isPlaying={isPlaying} audio={avatarAudioRef} isMale={isMale} avatarNumber={avatarNumber} setIsLoading={setIsLoading}/>
             </div>
             <div className="w-[75%] max-w-[400px] mx-[80px] py-8 flex items-center">
                 {/* Caption Area */}
@@ -49,7 +54,7 @@ const AvatarPreview = ({avatarNumber,isMale}) => {
                                 isPlaying? <Pause color="white" size={26} strokeWidth={2}/> : <Play size={26} strokeWidth={2} color="white"/>
                             }
                         </div>
-                        <div className="rounded-xl bg-red-500/80 p-1" onClick={() => {setIsClosed(true); avatarAudioRef.current.pause()}}>
+                        <div className="rounded-xl bg-red-500/80 p-1" onClick={() => {setIsVisible(false); avatarAudioRef.current.pause()}}>
                         <X size={28} color="white" strokeWidth={3}/>
                         </div>
                     </div>
