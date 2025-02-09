@@ -8,18 +8,24 @@ import What from "./sections/what";
 import Footer from "./sections/Footer";
 
 const App = () => {
-    return (
-      <>
-      <div className="bg-white">
-        <Header/>
-        <Hero/>
-        <Why/>
-        <How/>
-        <What/>
-        <Footer/>
-      </div>
-      </>
-    )
-}
+  return (
+    <>
+    <div className="bg-white">
+      <Header />
+      <Hero />
+      <section id="why">
+        <Why />
+      </section>
+      <section id="how">
+        <How />
+      </section>
+      <section id="what">
+        <What />
+      </section>
+      <Footer />
+    </div>
+    </>
+  );
+};
 
 export default App;
