@@ -1,6 +1,9 @@
 import React from 'react';
 
 const Header = () => {
+
+    const [showPopup, setShowPopup] = useState(false);
+    
     return (
         <header className="fixed top-0 left-0 w-full flex justify-between items-center p-3 md:p-3 bg-white border-b-2 border-gray-200 shadow-sm z-50">
             {/* Logo */}
@@ -17,11 +20,12 @@ const Header = () => {
             </nav>
 
             {/* Get Started Button */}
-            <div className='p-1 md:p-2 bg-[#6E5EE5]/35 rounded-2xl flex justify-center items-center'>
+            <div onClick={() => setShowPopup(true)} className='p-1 md:p-2 bg-[#6E5EE5]/35 rounded-2xl flex justify-center items-center'>
                 <div className='px-1.5 py-0.5 md:px-3 md:py-1 bg-[#6E5EE5]/55 rounded-2xl flex justify-center items-center'>
                     <p className='text-md md:text-lg font-bold text-white'>Get Started</p>
                 </div>
             </div>
+            {showPopup && <WaitlistPopup onClose={() => setShowPopup(false)} />}
         </header>
     );
 };
