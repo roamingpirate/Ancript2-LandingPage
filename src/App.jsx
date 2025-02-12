@@ -7,6 +7,8 @@ import How from "./sections/How";
 import What from "./sections/what";
 import Footer from "./sections/Footer";
 
+window.STATIC_FILES_URL = 'https://d26140tf93f9gz.cloudfront.net';
+
 const App = () => {
   return (
     <>

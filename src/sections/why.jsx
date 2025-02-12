@@ -39,7 +39,7 @@ const Why = () => {
                         Ancript Beats Screen Recordings & Text-Heavy Slides
                     </p>
                     <div className="flex-grow flex md:hidden mx-auto w-[clamp(300px,65vw,60rem)] my-2 mb-8">
-                    <img src="why.png" alt="Why Us" className="h-auto rounded-xl"/>
+                    <img src={`${window.STATIC_FILES_URL}/why.webp`} alt="Why Us" className="h-auto rounded-xl" loading='lazy'/>
                     </div>
                     <Points heading={'Boost Completion Rates'} text={'– Students stay hooked with avatar-guided lessons'}/>
                     <Points heading={'Save 10+ Hours/Month'} text='– No scripting, editing, or hiring voice actors.'/>
@@ -48,7 +48,7 @@ const Why = () => {
                 </div>
                 {/* Image */}
                 <div className=" flex-grow hidden md:flex items-center justify-center mx-8">
-                    <img src="why.png" alt="Why Us" className="w-[clamp(30rem,36vw,34rem)] h-auto rounded-xl"/>
+                    <img src={`${window.STATIC_FILES_URL}/why.webp`} loading='lazy' alt="Why Us" className="w-[clamp(30rem,36vw,34rem)] h-auto rounded-xl"/>
                 </div>
             </div>
             {/* CTA */}
@@ -56,7 +56,7 @@ const Why = () => {
                 <div onClick={() => setShowPopup(true)} className='w-fit px-8 py-2 border-1 border-gray-600 shadow-sm shadow-gray-200 rounded-xl cursor-pointer'>
                   <p className='text-gray-900 font-sans font-medium lg:text-lg'>Get Started Now</p>
                 </div>
-                <img src="avatar2.png" onClick={() => setIsVisible(!isVisible)} className="h-[46px] w-[46px] rounded-full border-2 border-blue-900 cursor-pointer glow-border"/>
+                <img src={`${window.STATIC_FILES_URL}/avatar2.webp`} loading='lazy' onClick={() => setIsVisible(!isVisible)} className="h-[46px] w-[46px] rounded-full border-2 border-blue-900 cursor-pointer glow-border"/>
             </div>
             {isVisible && <AvatarPreview avatarNumber={2} isMale={true} isVisible={isVisible} setIsVisible={setIsVisible}/>}
             {showPopup && <WaitlistPopup onClose={() => setShowPopup(false)} />}

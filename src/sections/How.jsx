@@ -39,7 +39,7 @@ const How = () => {
                         From Slides to Smart Explanations in Minutes!
                     </p>
                     <div className="flex-grow flex md:hidden mx-auto w-[clamp(180px,40vw,20rem)] my-2 mb-8">
-                    <img src="how.png" alt="Why Us" className="h-auto rounded-full"/>
+                    <img src={`${window.STATIC_FILES_URL}/how.webp`} loading='lazy' alt="Why Us" className="h-auto rounded-full"/>
                     </div>
                     <Points heading={'Upload Your Presentation'} text={'– Import your PowerPoint or PDF.'}/>
                     <Points heading={'Record Your Thoughts Casually'} text=' – No need for perfection. Just speak.'/>
@@ -51,12 +51,12 @@ const How = () => {
                         <div onClick={() => setShowPopup(true)} className='w-fit px-8 py-2 border-1 border-gray-600 shadow-sm shadow-gray-200 rounded-xl cursor-pointer'>
                         <p className='text-gray-900 font-sans font-medium lg:text-lg'> Learn More </p>
                         </div>
-                        <img src="avatar3.png" onClick={() => setIsVisible(!isVisible)} className="h-[46px] w-[46px] rounded-full border-2 border-blue-900 cursor-pointer glow-border"/>
+                        <img src={`${window.STATIC_FILES_URL}/avatar3.webp`} loading='lazy' onClick={() => setIsVisible(!isVisible)} className="h-[46px] w-[46px] rounded-full border-2 border-blue-900 cursor-pointer glow-border"/>
                     </div>
                 </div>
                 {/* Image */}
                 <div className=" flex-grow hidden md:flex items-center justify-center mx-8">
-                    <img src="how.png" alt="Why Us" className="w-[clamp(18rem,36vw,26rem)] h-auto rounded-full"/>
+                    <img src={`${window.STATIC_FILES_URL}/how.webp`} loading='lazy' alt="Why Us" className="w-[clamp(18rem,36vw,26rem)] h-auto rounded-full"/>
                 </div>
             </div>
             {isVisible && <AvatarPreview avatarNumber={3} isMale={false} isVisible={isVisible} setIsVisible={setIsVisible}/>}

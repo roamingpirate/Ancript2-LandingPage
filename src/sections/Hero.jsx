@@ -19,7 +19,7 @@ const Hero = () => {
                 </p>
             </div>
             <div className="px-8 pt-4 md:px-0 flex md:justify-center items-center space-x-2.5 cursor-pointer" onClick={() => setIsVisible(!isVisible)}>
-                <img src="avatar.png" className="h-[46px] w-[46px] rounded-full border-2 border-blue-900"/>
+                <img src={`${window.STATIC_FILES_URL}/avatar.webp`} className="h-[46px] w-[46px] rounded-full border-2 border-blue-900"/>
                 <div className="bg-gray-700 text-white text-sm px-3 py-2 rounded-md shadow-lg relative">
                     Click Me!
                     <div className="absolute left-[-15px] top-1/2 -translate-y-1/2 border-8 border-transparent border-r-gray-700"></div>

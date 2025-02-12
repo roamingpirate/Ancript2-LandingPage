@@ -27,6 +27,7 @@ const avatarsId = [
   '67a7686804fd6bfbf2e39bbf'
 ];
 
+
 const avatarLipsyncArray = [avatar_lipsync_1, avatar_lipsync_2, avatar_lipsync_3];
 
 
@@ -35,7 +36,7 @@ export function Avatar({isPlaying, audio, isMale, avatarNumber}) {
   // Avatar Setup
   console.log(avatarNumber);
   console.log(avatarsId[avatarNumber-1],"pop");
-  const avatarUrl = `https://models.readyplayer.me/${avatarsId[avatarNumber-1]}.glb?morphTargets=ARKit,Oculus%20Visemes`
+  const avatarUrl = `${window.STATIC_FILES_URL}/${avatarsId[avatarNumber-1]}.glb`;
   const { scene } = useGLTF(avatarUrl);
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes, materials } = useGraph(clone);

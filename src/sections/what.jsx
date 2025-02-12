@@ -36,7 +36,7 @@ const What = () => {
                         Features
                     </p>
                     <div className="flex-grow flex md:hidden mx-auto w-[clamp(300px,65vw,60rem)] my-2 mb-8">
-                    <img src="what.jpg" alt="Why Us" className="h-auto rounded-xl"/>
+                    <img src={`${window.STATIC_FILES_URL}/what.webp`} loading='lazy' alt="Why Us" className="h-auto rounded-xl"/>
                     </div>
                     <Points heading={'AI-Generated Voice & Avatars'} text={' – No need to record videos, just speak!'}/>
                     <Points heading={'Pin Explanations to Any Slide'} text=' – Highlight key points where needed.'/>
@@ -52,7 +52,7 @@ const What = () => {
                 </div>
                 {/* Image */}
                 <div className=" flex-grow hidden md:flex items-center justify-center mx-8">
-                    <img src="what.jpg" alt="Why Us" className="w-[clamp(20rem,35vw,24rem)] h-auto rounded-xl"/>
+                    <img src={`${window.STATIC_FILES_URL}/what.webp`} loading='lazy' alt="Why Us" className="w-[clamp(20rem,35vw,24rem)] h-auto rounded-xl"/>
                 </div>
             </div>
             {showPopup && <WaitlistPopup onClose={() => setShowPopup(false)} />}

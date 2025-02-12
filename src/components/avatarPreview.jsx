@@ -12,7 +12,7 @@ const AvatarPreview = ({avatarNumber,isMale,isVisible,setIsVisible}) => {
     const avatarAudioRef = useRef(null);
 
     useEffect(() => {
-        avatarAudioRef.current = new Audio(`Avatar_audio_${avatarNumber}.wav`);
+        avatarAudioRef.current = new Audio(`${window.STATIC_FILES_URL}/Avatar_audio_${avatarNumber}.flac`);
         avatarAudioRef.current.onended = () => setIsPlaying(false);
 
         return () => {

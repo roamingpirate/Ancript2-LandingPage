@@ -7,7 +7,7 @@ const SubtitlesSyncText = ({ subtitleFile, audioRef }) => {
 
   useEffect(() => {
     const fetchSubtitles = async () => {
-        const response = await fetch(`./${subtitleFile}.srt`);
+        const response = await fetch(`${window.STATIC_FILES_URL}/${subtitleFile}.srt`);
         const data = await response.text();
         console.log(data);
         var parser = new srtParser2();

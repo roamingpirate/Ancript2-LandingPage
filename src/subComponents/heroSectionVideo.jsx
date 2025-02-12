@@ -41,14 +41,14 @@ const VideoSection = ({ }) => {
             {(!isPlaying || !isVisible) && (
                 <div
                     className="absolute inset-0 rounded-lg flex justify-center items-center bg-black bg-opacity-50 z-10"
-                    onClick={() => setIsPlaying(true)}
                     style={{
-                        backgroundImage: `url(/thumbnail.png)`,
+                        backgroundImage: `url(${window.STATIC_FILES_URL}/thumbnail.webp)`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
                 >
                     <button
+                        onClick={() => setIsPlaying(true)}
                         className="p-1 sm:p-2 bg-opacity-70 border-4 mt-[clamp(4rem,14vw,20rem)] border-white rounded-full text-white"
                     >
                         <PlayArrowIcon style={{ fontSize: 'clamp(22px, 5vw, 60px)' }} />
@@ -62,9 +62,10 @@ const VideoSection = ({ }) => {
                 style={{ opacity: isPlaying && isVisible ? 1 : 0, transition: 'opacity 0.3s ease' }}
                 width="100%"
                 height="100%"
-                url={`demoVideo.mp4`}
+                url={`${window.STATIC_FILES_URL}/demoVideo.mp4`}
                 playing={isPlaying}
                 controls={true}
+                preload="false"
                 onPause={() => setIsPlaying(false)}
             />
         </div>
